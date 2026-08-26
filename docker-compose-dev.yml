@@ -1,0 +1,14 @@
+
+services:
+  node-app:
+    build: 
+      context: .
+      # args:
+      #   NODE_ARG: development
+      target: development
+    volumes:
+      - ./index.js:/app/index.js:ro
+    environment:
+      bd_key: "888888888"
+      bd_name: "data-dev"
+    command: npm run start-dev

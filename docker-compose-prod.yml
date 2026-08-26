@@ -1,0 +1,11 @@
+services:
+  node-app:
+      build:
+        context: .
+        # args:
+        #     NODE_ARG: production
+        target: production
+      environment:
+         bd_key: "77777777"
+         bd_name: "data"
+      command: npm run start
