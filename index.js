@@ -1,5 +1,5 @@
 const express = require("express");
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 const redis = require("redis")
 const { Pool} = require("pg")
 
@@ -15,14 +15,14 @@ client.connect()
 client.on("connect", () => console.log("connected"))
 
 client.on("error", (err) => console.log("Redis Client Error", err))
-const BD_USER = "root";
-const BD_PASSWORD = "example";
-const BD_PORT ="27017" ;
-const BD_HOST = "mongo";
+// const BD_USER = "root";
+// const BD_PASSWORD = "example";
+// const BD_PORT ="27017" ;
+// const BD_HOST = "mongo";
 
 pg_main.connect()
 
-mongoose.connect(`mongodb://${BD_USER}:${BD_PASSWORD}@${BD_HOST}:${BD_PORT}`);
+// mongoose.connect(`mongodb://${BD_USER}:${BD_PASSWORD}@${BD_HOST}:${BD_PORT}`);
 
 
 

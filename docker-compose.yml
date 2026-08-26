@@ -7,30 +7,30 @@ services:
     depends_on:
       # - mongo-express
       - redis
-  mongo:
-    image: mongo
-    restart: always
-    volumes:
-      - mongo-db:/data/db
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
-    depends_on:
-      - redis
-      - nginx
+  # mongo:
+  #   image: mongo
+  #   restart: always
+  #   volumes:
+  #     - mongo-db:/data/db
+  #   environment:
+  #     MONGO_INITDB_ROOT_USERNAME: root
+  #     MONGO_INITDB_ROOT_PASSWORD: example
+  #   depends_on:
+  #     - redis
+  #     - nginx
     
-  mongo-express:
-    image: mongo-express
-    restart: always
-    ports:
-      - 8081:8081
+  # mongo-express:
+  #   image: mongo-express
+  #   restart: always
+  #   ports:
+  #     - 8081:8081
     
     
-    environment:
-      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
-      ME_CONFIG_BASICAUTH_ENABLED: true
-      ME_CONFIG_BASICAUTH_USERNAME: mongoexpressuser
-      ME_CONFIG_BASICAUTH_PASSWORD: mongoexpresspass
+    # environment:
+    #   ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+    #   ME_CONFIG_BASICAUTH_ENABLED: true
+    #   ME_CONFIG_BASICAUTH_USERNAME: mongoexpressuser
+    #   ME_CONFIG_BASICAUTH_PASSWORD: mongoexpresspass
   redis:
     image: redis
   nginx:
@@ -61,11 +61,11 @@ services:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: example
 
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
+  # adminer:
+  #   image: adminer
+  #   restart: always
+  #   ports:
+  #     - 8080:8080
 
 volumes:
   mongo-db: 
