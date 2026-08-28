@@ -2,7 +2,7 @@
 services:
   node-app:
     container_name: first-project
-    image: hussamibr/u-project
+    image: hussamibr/a-project
     ports:
       - "4000:4000"
     depends_on:
