@@ -28,7 +28,7 @@ pg_main.connect()
 
 app.get('/' , async (req ,res)=>{
    await client.set("hussam" , "hussam...")
-    res.send('<h1>Wellcome to AWS test </h1>')
+    res.send('<h1>Wellcome to AWS test , by hussam </h1>')
 })
 app.get('/data' , async (req ,res)=>{
    const data = await client.get("hussam")
