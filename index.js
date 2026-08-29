@@ -2,6 +2,7 @@ const express = require("express");
 // const mongoose = require("mongoose");
 const redis = require("redis")
 const { Pool} = require("pg")
+const os = require("os")
 
 
 PORT = process.env.PORT || 4000;
@@ -28,7 +29,8 @@ pg_main.connect()
 
 app.get('/' , async (req ,res)=>{
    await client.set("hussam" , "hussam...")
-    res.send('<h1>this is load balencer nginx ??</h1>')
+   console.log(`this is connect for ${os.hostname}`)
+    res.send('<h1>this is load balencer nginx ?? Hussam ibrahhahah</h1>')
 })
 app.get('/data' , async (req ,res)=>{
    const data = await client.get("hussam")
