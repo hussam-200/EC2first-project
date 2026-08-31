@@ -30,7 +30,7 @@ pg_main.connect()
 app.get('/' , async (req ,res)=>{
    await client.set("hussam" , "hussam...")
    console.log(`this is connect for ${os.hostname}`)
-    res.send('<h1>this is load balencer nginx ?? Hussam ibrahhahah</h1>')
+    res.send('<h1>this is load balencer nginx ??</h1>')
 })
 app.get('/data' , async (req ,res)=>{
    const data = await client.get("hussam")
